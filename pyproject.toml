@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "options-pl"
+version = "0.1.0"
+description = "Calendar Diagonal Spread Analyzer - A Streamlit app for options analysis with data fetcher"
+authors = ["User"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.48.0"
+yfinance = "^0.2.65"
+numpy = "^2.3.2"
+matplotlib = "^3.10.5"
+scipy = "^1.16.1"
+pandas = "^2.3.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^4.0.0"
+black = "^24.0.0"
+flake8 = "^7.0.0"
+
+[tool.poetry.scripts]
+data-fetcher = "data_fetcher.src.data_fetcher:main"
+test-data-fetcher = "data_fetcher.test_simple:test_basic_functionality"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
